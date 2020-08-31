@@ -9,4 +9,4 @@
 
 // Export widget models and views, and the npm package version number.
 module.exports = require('./j_visualizer.js');
-module.exports['version'] = require('./package.json').version;
+module.exports['version'] = require('../package.json').version;

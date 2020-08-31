@@ -25,7 +25,7 @@ module.exports = [
         // "load_ipython_extension" function which is required for any notebook
         // extension.
         //
-        entry: "./extension.js",
+        entry: "./lib/extension.js",
         output: {
             filename: "extension.js",
             path: path.resolve(__dirname, "..", "open3d", "static"),
@@ -39,7 +39,7 @@ module.exports = [
         // custom widget.
         // It must be an amd module
         //
-        entry: "./index.js",
+        entry: "./lib/index.js",
         output: {
             filename: "index.js",
             path: path.resolve(__dirname, "..", "open3d", "static"),
@@ -50,5 +50,17 @@ module.exports = [
             rules: rules
         },
         externals: ["@jupyter-widgets/base"]
-    }
+    },
+    {
+        entry: "./assets/disc.png",
+        output: {
+            filename: "disc.png",
+            path: path.resolve(__dirname, "..", "open3d", "static"),
+            libraryTarget: "amd"
+        },
+        module: {
+            rules: rules
+        },
+        externals: ["@jupyter-widgets/base"]
+     }
 ];

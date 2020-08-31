@@ -47,8 +47,8 @@ configure_file("${PYTHON_PACKAGE_SRC_DIR}/conda_meta/conda_build_config.yaml"
                "${PYTHON_PACKAGE_DST_DIR}/conda_meta/conda_build_config.yaml")
 configure_file("${PYTHON_PACKAGE_SRC_DIR}/conda_meta/meta.yaml"
                "${PYTHON_PACKAGE_DST_DIR}/conda_meta/meta.yaml")
-configure_file("${PYTHON_PACKAGE_SRC_DIR}/js/j_visualizer.js"
-               "${PYTHON_PACKAGE_DST_DIR}/js/j_visualizer.js")
+configure_file("${PYTHON_PACKAGE_SRC_DIR}/js/lib/j_visualizer.js"
+               "${PYTHON_PACKAGE_DST_DIR}/js/lib/j_visualizer.js")
 configure_file("${PYTHON_PACKAGE_SRC_DIR}/js/package.json"
                "${PYTHON_PACKAGE_DST_DIR}/js/package.json")
 file(COPY "${PYTHON_PACKAGE_DST_DIR}/../_build_config.py"

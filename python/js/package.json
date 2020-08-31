@@ -3,6 +3,7 @@
     "version": "@PROJECT_VERSION_THREE_NUMBER@",
     "description": "Open3D Jupyter Widgets",
     "author": "Open3D Team",
+    "main": "lib/index.js",
     "license": "MIT",
     "private": true,
     "repository": {
@@ -18,9 +19,12 @@
         "3d-vision",
         "robotics",
         "point-cloud",
-        "triangle-mesh"
+        "triangle-mesh",
+	"jupyterlab-extension"
     ],
     "files": [
+	"assets/**/*.png",
+	"lib/**/*.js",
         "dist/*.js"
     ],
     "scripts": {
@@ -42,9 +46,12 @@
         "webpack-cli": "^3.1.2"
     },
     "dependencies": {
-        "@jupyter-widgets/base": "^1.2.2",
+	"@jupyter-widgets/base": "^1.2.2 || ^2 || ^3",
         "lodash": "^4.17.11",
         "three": "^0.97.0",
         "three-orbit-controls": "^82.1.0"
+    },
+    "jupyterlab": {
+	"extension": "lib/labplugin"
     }
 }
